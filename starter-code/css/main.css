@@ -1,10 +1,178 @@
-/*
-Colors to use:
-dark blue: #06365f
-light blue: #1c5380
-*/
+/* general & containers */
 
 body {
   font: 200 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
+  background-image: url('../images/bgtile.png');
+  background-repeat: repeat-x;
+}
+
+.body-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.main-container {
+  padding: 100px 10px 20px;
+  display: flex;
+  max-width: 700px;
+}
+
+/* left column */
+
+.left-col {
+  width: 40%;
+  box-sizing: border-box;
+}
+
+.phone-image {
+  width: 260px;
+}
+
+/* right column */
+
+.right-col {
+  width: 60%;
+  box-sizing: border-box;
+  bottom: 250px;
+}
+
+.header {
+  padding: 5px 0px 20px 0;
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  width: 250px;
+}
+
+.login-btn {
+  background-color: #5e8bad;
+  -webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.15);
+  -moz-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.15);
+  box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.15);
+  padding: 2px;
+  height: 25px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.login-a {
+  padding: 3px 6px;
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 0.9em;
+}
+
+.home-logo {
+  padding: 3px;
+  height: 17px;
+}
+
+.content-container {
+  -webkit-box-shadow: 1.5px 1.5px 1.5px 1.5px rgba(0,0,0,0.1);
+  -moz-box-shadow: 1.5px 1.5px 1.5px 1.5px rgba(0,0,0,0.1);
+  box-shadow: 1.5px 1.5px 1.5px 1.5px rgba(0,0,0,0.0.1);
+  border-radius: 3px;
+  padding: 5px 20px 20px;
+  background-color: white;
+}
+
+h3 {
+  color: #06365f;
+  line-height: 1.4em;
+}
+
+.content-container > p {
+  font-size: 0.85em;
+  font-weight: 350;
+}
+
+/* footer */
+
+footer {
+  text-align: center;
+}
+
+.footer-list {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.footer-list-item {
+  text-transform: uppercase;
+  color: #1c5380;
+  font-size: 11px;
+  display: inline-block;
+}
+
+.footer-list-item > a, .copyright {
+  text-decoration: none;
+  color: #1c5380;
+  font-weight: bold;
+  padding: 0px 5px;
+}
+
+.copyright {
+  color: lightgray;
+  padding-left: 10px;
+}
+
+@media (max-width: 675px) {
+  .phone-image {
+    width: 230px;
+  }
+
+  .app-badge {
+    width: 120px;
+  }
+}
+
+@media (max-width: 605px) {
+  .phone-image {
+    width: 220px;
+  }
+
+  .app-badge {
+    width: 110px;
+  }
+}
+
+@media (max-width: 580px) {
+  .left-col {
+    display: none;
+  }
+
+  .main-container {
+    justify-content: center;
+  }
+
+  .content-container {
+    text-align: center;
+    width: 80%;
+  }
+
+  .login-btn {
+    display: none;
+    /* margin: 10px 0 50px; */
+  }
+
+  .header {
+    justify-content: center; 
+  }
+
+  .logo {
+    padding-right: 15px;
+  }
+
+  .right-col {
+    width: 80%;
+  }
 }
